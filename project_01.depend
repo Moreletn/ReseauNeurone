@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1734804229 source:c:\users\tsopm\desktop\project_rn40\project_01\main.c
+	<stdio.h>
+	<stdlib.h>
+	"neuron_implementation.c"
+	"neuron_network.c"
+
+1733333251 c:\users\tsopm\desktop\project_rn40\project_01\weight_header.h
+
+1734433090 c:\users\tsopm\desktop\project_rn40\project_01\neuron_header.h
+	"weight_header.h"
+
+1734796273 c:\users\tsopm\desktop\project_rn40\project_01\weight_implementation.c
+	"weight_header.h"
+
+1734801696 c:\users\tsopm\desktop\project_rn40\project_01\neuron_implementation.c
+	"neuron_header.h"
+	"weight_implementation.c"
+
+1734797632 c:\users\tsopm\desktop\project_rn40\project_01\layer_implementation.c
+	"layer_header.h"
+
+1734436472 c:\users\tsopm\desktop\project_rn40\project_01\layer_header.h
+	"neuron_header.h"
+
+1734802951 c:\users\tsopm\desktop\project_rn40\project_01\neuron_network.h
+	"weight_header.h"
+	"layer_header.h"
+
+1734805166 c:\users\tsopm\desktop\project_rn40\project_01\neuron_network.c
+	"neuron_network.h"
+	"layer_implementation.c"
+

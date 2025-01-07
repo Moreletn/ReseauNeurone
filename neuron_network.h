@@ -9,7 +9,7 @@ typedef struct n_res {
 } n_network ;  // un element d'un reseau de neurone
 
 list getNeuron(int nb_neuron);
-typedef n_network  * list_layer;  // une liste de couche
+typedef n_network* list_layer;  // une liste de couche
 
 list_layer CreerResNeur (int nbre_layer, list nbre_neurL);
 

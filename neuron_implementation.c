@@ -4,12 +4,16 @@
 #include"weight_implementation.c"
 
 
-// methode pour creer une liste contenant le poids
-list match ( int n, int weight ){
+// methode pour creer une liste de poids
+list match ( int n ){  // n representant le nombre d'entrées
 
-list inter = NULL;
+int weight;
+list inter = NULL; // nom de la liste inter
 
-    for ( int i=0 ; i<n ; i++){
+    for ( int i=1 ; i<=n ; i++){
+
+        printf("Veuillez fournir le poids de l'entree %d \n", i);
+        scanf("%d",&weight);
 
         inter=add_tail(inter , weight);
     }
@@ -17,10 +21,10 @@ list inter = NULL;
 }
 
 
-neuron InitNeur( int nbre_input , int seuil, int weight){
+neuron InitNeur( int nbre_input , int seuil, list list_poids){
     neuron neur;
     neur.biais = seuil ;
-    neur.list_weight = match(nbre_input,weight);
+    neur.list_weight = list_poids;
      // a enlever
 
     return neur ;
@@ -71,6 +75,6 @@ void print_neur(neuron neur){
     printf("le biais est %d \n" , neur.biais );
     printf("la liste des poids est \n");
     print(neur.list_weight);
-
+    printf("..... \n");
 
 }

@@ -54,7 +54,7 @@ return lyr ;
 
 layer initCouche (int nbre_neuron, int nbre_input){
 
- int seuil , weight ;
+ int seuil  ;
  neuron neur ;
 layer lyr=create() ;
 
@@ -65,11 +65,11 @@ layer lyr=create() ;
         printf("Entrer le biais du neuron %d \n" ,i );
         scanf("%d" , &seuil);
 
-        printf(" Entrer le poids du neuron %d \n" , i);
-        scanf("%d" , &weight);
+        list list_poids = create();
+        list_poids = match(nbre_input);
 
 
-        neur = InitNeur(nbre_input,seuil,weight);
+        neur = InitNeur(nbre_input,seuil,list_poids);
         lyr = add_tailNeur(lyr , neur);
 
     }

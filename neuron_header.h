@@ -9,9 +9,9 @@ typedef struct elem {
 
 
 
-list match ( int n, int weight );
+list match ( int n );
 
-neuron InitNeur( int nbre_input , int seuil, int weight);
+neuron InitNeur( int nbre_input , int seuil, list list_poids);
 list getInput(int nb_input);
 int enable (list list_input, list list_weight);// fonction d'activation
 

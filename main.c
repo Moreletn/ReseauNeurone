@@ -8,9 +8,10 @@
 int main(){
 
 
-    int seuil , n_input , poids , test;
+    int seuil , n_input , test;
     neuron neurone1;
     list list_input = create();
+    list list_poids = create();
 
     layer lyr1=NULL;
     int n_neur ;
@@ -22,8 +23,8 @@ int main(){
 
 
       /* creation d'un neurone : partie 1 */
- /*
-    printf(" ********creation d'un neurone : partie 1***********\n ");
+
+  /* printf(" ********creation d'un neurone : partie 1***********\n ");
 
 
         // demande du seuil a l'utilisateur
@@ -31,15 +32,14 @@ int main(){
     scanf("%d", &seuil);
 
         // demande du nbre d'entrées a l'utilisateur
-    printf("Entrer le nombre d'entree du neurone \n");
+    printf("Entrer le nombre d'entrees du neurone \n");
     scanf( "%d" , &n_input);
 
         // demande du poids a l'utilisateur
-    printf("Entrer le poids du neurone \n ");
-    scanf( "%d" , &poids);
+    list_poids = match(n_input);
 
         // cretion du neurone
-    neurone1 = InitNeur(n_input , seuil,poids );
+    neurone1 = InitNeur(n_input , seuil,list_poids );
     print_neur(neurone1);
 
         // pour recupere les valeurs des entrées du neurone
@@ -49,15 +49,19 @@ int main(){
     test = OutNeurone( neurone1, list_input);
 
         // afficher le resulat de la sortie de neurone
-    printf(" the result of enable is  %d \n" , test );
-
+    printf(" La sortie de ce neurone est donc : %d \n" , test );
 */
+
         /* creation d'une couche de neurone : partie2 */
-/*     printf("**************creation d'une couche de neurone : partie2********** \n ");
+ /*   printf("**************creation d'une couche de neurone : partie2********** \n ");
 
         //Demande du nombre de neurone
     printf("Entrer le nombre de neurone pour la couche\n");
     scanf( "%d" , &n_neur);
+
+     // demande du nbre d'entrées a l'utilisateur
+    printf("Entrer le nombre d'entrees du neurone \n");
+    scanf( "%d" , &n_input);
 
         //Creation de la couche de neurone
     lyr1 = initCouche(n_neur , n_input);
@@ -74,15 +78,11 @@ int main(){
 
 */
             /* creation du reseau de neurone : partie3 */
-     printf("**************creation du reseau de neurone : partie3********** \n ");
+    printf("**************creation du reseau de neurone : partie3********** \n ");
 
         //demande du nombre de couche pour le reseau de neurone
     printf("Entrer le nombre de couche\n");
     scanf( "%d" , &n_layer);
-
-        //demande du nombre de neurone par couche
-    /*printf("Entrer le nombre de neurone par couche \n");
-    scanf( "%d" , &n_neurL);*/
 
         // pour recupere les valeurs du nombre de neurone par couche
     list_nbre_neurL = getNeuron(n_layer);
@@ -91,7 +91,9 @@ int main(){
     res_neurL = CreerResNeur ( n_layer, list_nbre_neurL);
 
         // afficher le reseau de neurone
-    print_list_layer(res_neurL);
+   // print_list_layer(res_neurL);
+
+
 
 return 0;
 
